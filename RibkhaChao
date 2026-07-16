@@ -1,0 +1,129 @@
+# Product Requirements Document (PRD)
+## Website Portofolio — Ribkha Marzhanata Purba
+
+**Versi:** 1.0
+**Tanggal:** 16 Juli 2026
+**Disusun untuk:** Ribkha Marzhanata Purba
+RibkhaChao
+---
+
+## 1. Ringkasan (Overview)
+
+Website portofolio pribadi untuk memperkenalkan Ribkha Marzhanata Purba sebagai penyanyi internasional, sekaligus menjadi ruang untuk mendokumentasikan perjalanan belajarnya di bidang pengembangan web (HTML & CSS). Website ini akan berfungsi ganda: sebagai etalase karya/prestasi menyanyi, dan sebagai "buku catatan digital" hasil belajar coding yang bisa terus berkembang seiring kemajuan belajarnya.
+
+## 2. Latar Belakang
+
+Ribkha saat ini duduk di bangku SMA (riwayat pendidikan: SD Joannes Bosco → SMP Budi Utama → SMA Stella Duce 1) dan sedang mempelajari HTML & CSS. Karena website ini juga menjadi media latihan, situs akan dibangun bertahap dan sengaja menyertakan bagian yang menunjukkan progres belajar coding, bukan hanya hasil akhir yang sudah sempurna.
+
+## 3. Tujuan Produk
+
+1. Memperkenalkan profil Ribkha sebagai penyanyi kepada publik/industri musik.
+2. Menampilkan prestasi, portofolio nyanyi (video, audio, penghargaan) di satu tempat.
+3. Mendokumentasikan proses belajar HTML & CSS dalam bentuk slide/showcase yang bisa diperbarui.
+4. Menjadi media kontak bagi pihak yang ingin mengundang/bekerja sama (manggung, kolaborasi, dsb).
+
+## 4. Target Pengguna
+
+| Persona | Kebutuhan |
+|---|---|
+| Penggemar / publik umum | Ingin tahu profil, karya, dan jadwal tampil Ribkha |
+| Event organizer / promotor musik | Ingin melihat portofolio, demo, dan cara menghubungi |
+| Guru/mentor coding & Ribkha sendiri | Ingin melihat progres pembelajaran HTML & CSS dari waktu ke waktu |
+| Sekolah (SMA Stella Duce 1) | Referensi karya siswa untuk kegiatan/portofolio sekolah |
+
+## 5. Ruang Lingkup (Scope)
+
+### Termasuk (in-scope)
+- Website single-page atau multi-section, statis (HTML & CSS, boleh tambah JS ringan)
+- Semua section pada poin 6 di bawah
+- Desain responsif (bisa dibuka di HP dan laptop)
+
+### Tidak termasuk (out-of-scope) untuk versi 1.0
+- Sistem login/member
+- E-commerce (jual merchandise/tiket)
+- Backend/database (komentar, formulir yang tersimpan otomatis) — bisa jadi rencana v2
+
+## 6. Struktur & Fitur Halaman (Section)
+
+### 6.1 Hero / Beranda
+- Nama besar: **Ribkha Marzhanata Purba**
+- Tagline: "Penyanyi Internasional"
+- Foto/visual utama
+- Tombol arah cepat: Tentang, Portofolio, Belajar Coding, Kontak
+
+### 6.2 Tentang Saya (About)
+- Perkenalan singkat diri
+- Riwayat pendidikan: SD Joannes Bosco, SMP Budi Utama, SMA Stella Duce 1
+- Cerita perjalanan menjadi penyanyi
+
+### 6.3 Portofolio Menyanyi
+- Galeri video/foto penampilan
+- Daftar prestasi/penghargaan
+- Embed lagu/rekaman (YouTube/Spotify, dsb.)
+
+### 6.4 Hasil Belajar HTML & CSS (Section Slide) — *Fitur Khas Permintaan*
+- Ditampilkan dalam bentuk **slide/carousel** yang bisa digeser (next/prev)
+- Setiap slide berisi:
+  - Judul latihan/proyek (mis. "Latihan 1: Membuat Kartu Profil")
+  - Cuplikan tampilan hasil (screenshot atau live preview kecil)
+  - Catatan singkat: apa yang dipelajari di latihan tersebut
+  - Tanggal pengerjaan (opsional, untuk melihat progres dari waktu ke waktu)
+- Slide baru bisa terus ditambahkan setiap kali ada latihan baru → section ini didesain agar mudah diperbarui sendiri oleh Ribkha (misalnya cukup menambah 1 blok kode untuk 1 slide baru)
+
+### 6.5 Kontak
+- Formulir kontak sederhana (nama, email, pesan) — bisa dikirim lewat email (mailto) atau layanan form gratis
+- Tautan media sosial (Instagram, YouTube, dsb.)
+
+### 6.6 Footer
+- Hak cipta
+- Tautan sosial media (ulang, ringkas)
+
+## 7. User Stories
+
+- Sebagai pengunjung, saya ingin melihat profil dan karya Ribkha agar saya mengenal dia sebagai penyanyi.
+- Sebagai promotor musik, saya ingin menonton demo/rekaman langsung dari website agar saya bisa menilai kemampuannya.
+- Sebagai Ribkha, saya ingin menambahkan slide baru setiap kali menyelesaikan latihan HTML & CSS agar progres belajar saya terlihat dari waktu ke waktu.
+- Sebagai pengunjung, saya ingin menghubungi Ribkha dengan mudah lewat formulir kontak atau media sosial.
+
+## 8. Kebutuhan Non-Fungsional
+
+| Aspek | Kebutuhan |
+|---|---|
+| Responsif | Tampil baik di HP, tablet, laptop |
+| Kecepatan | Ringan, cepat dimuat (gambar dikompres) |
+| Kompatibilitas browser | Chrome, Firefox, Safari, Edge versi terbaru |
+| Aksesibilitas | Kontras warna cukup, teks alt pada gambar |
+| Pemeliharaan | Struktur kode rapi agar mudah ditambah section/slide baru sendiri |
+
+## 9. Teknologi yang Disarankan
+
+Karena Ribkha masih belajar HTML & CSS, disarankan:
+- **HTML5 + CSS3** murni untuk struktur dan tampilan dasar
+- **JavaScript ringan** (opsional) untuk fitur slide/carousel otomatis
+- Hosting gratis: GitHub Pages, Netlify, atau Vercel
+- Tidak perlu framework berat (React, dsb.) di awal — agar sesuai level belajar saat ini dan mudah dipahami sendiri
+
+## 10. Milestone / Tahapan Pengerjaan
+
+| Tahap | Deliverable | Estimasi |
+|---|---|---|
+| 1. Wireframe/sketsa | Rancangan tata letak tiap section | 1 minggu |
+| 2. Struktur HTML | Kerangka semua section tanpa styling | 1 minggu |
+| 3. Styling CSS | Tampilan visual, warna, layout responsif | 2 minggu |
+| 4. Section Slide Belajar | Implementasi carousel + isi slide pertama | 1 minggu |
+| 5. Konten Portofolio Nyanyi | Upload video/foto/prestasi | 1 minggu |
+| 6. Uji coba & perbaikan | Cek di berbagai perangkat, perbaiki bug | 3-5 hari |
+| 7. Publikasi (hosting) | Website online dan bisa diakses publik | 2-3 hari |
+
+## 11. Indikator Keberhasilan (Success Metrics)
+
+- Website berhasil diakses dan tampil baik di HP maupun laptop
+- Section slide pembelajaran bisa ditambah sendiri oleh Ribkha tanpa bantuan orang lain
+- Ada minimal 1 karya/demo nyanyi yang bisa diputar langsung dari website
+- Formulir kontak berhasil mengirim pesan dengan benar
+
+## 12. Risiko & Catatan
+
+- Karena masih tahap belajar, disarankan mulai dari struktur sederhana dulu, lalu ditingkatkan bertahap.
+- Konten pribadi (foto, video) perlu izin dari pihak sekolah/keluarga bila akan dipublikasikan.
+- Jika ke depan ingin fitur formulir tersimpan otomatis atau blog, perlu backend — bisa direncanakan di versi 2.0.
