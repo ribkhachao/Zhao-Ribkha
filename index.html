@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ribkha Marzhanata Purba | Heritage in Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e3e2e0",
+                        "on-primary-container": "#cc726d",
+                        "on-primary-fixed-variant": "#77302d",
+                        "on-surface-variant": "#544341",
+                        "tertiary": "#735c00",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-fixed": "#3c0700",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1a1c1a",
+                        "on-background": "#1a1c1a",
+                        "surface-tint": "#954742",
+                        "outline": "#877270",
+                        "tertiary-fixed": "#ffe088",
+                        "surface": "#faf9f6",
+                        "secondary": "#b02700",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-container-low": "#f4f3f1",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "inverse-primary": "#ffb3ad",
+                        "on-secondary-fixed-variant": "#8a1d00",
+                        "tertiary-container": "#cca830",
+                        "primary": "#2a0002",
+                        "secondary-fixed": "#ffdad2",
+                        "secondary-container": "#dc3300",
+                        "outline-variant": "#dac1bf",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4a0e0e",
+                        "background": "#faf9f6",
+                        "surface-dim": "#dbdad7",
+                        "inverse-surface": "#2f312f",
+                        "secondary-fixed-dim": "#ffb4a2",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#e3e2e0",
+                        "surface-container-high": "#e9e8e5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdad7",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9f6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#3d0506",
+                        "inverse-on-surface": "#f2f1ee",
+                        "surface-container": "#efeeeb",
+                        "on-secondary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "block-padding": "3rem",
+                        "margin-mobile": "1.5rem",
+                        "gutter": "2rem",
+                        "section-gap": "8rem",
+                        "margin-page": "4rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "label-caps": ["Work Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .gilded-frame {
+            border: 1px solid #735c00;
+            padding: 12px;
+            background: #faf9f6;
+            box-shadow: 4px 4px 0px 0px #4a0e0e;
+        }
+        .hero-overlap {
+            z-index: 10;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px #2a0002;
+            color: transparent;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary selection:text-white">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center w-full px-4 md:px-margin-page py-6 max-w-screen-2xl mx-auto fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
+<a class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tighter" href="#">R. Purba</a>
+<div class="hidden md:flex space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#portfolio">Portfolio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#coding">Coding</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="px-6 py-2 bg-secondary text-white font-label-caps text-label-caps hover:scale-95 transition-transform duration-150">Connect</button>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden px-4">
+<div class="absolute top-20 left-10 opacity-20 hidden md:block">
+<div class="w-48 h-64 border border-tertiary p-2">
+<img class="w-full h-full object-cover" data-alt="A vintage black and white photograph of a classical theater stage, captured with a grainy, film-like texture. The lighting is dramatic and moody, focusing on a single microphone stand under a spotlight. The image fits a heritage art aesthetic with a deep burgundy and cream color palette, suggesting a prestigious and timeless atmosphere for an international singer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoWBgPDQnoeQSyXYOYbjZm7zqwp7UvZDFBXalsp9n6Orz8lih7cXr-IBKbN6h8-WTRUvNBTaLHy93OGW7KD8anGJGQ88QB-oJudC_L6Yri2mxX5Tpz_A2QdxwwfZkifPFYlFwGmot1c6OZw7-ccEHI8QLf8IUbOI2TZL7Y1GWVdVTFbBJqS1V2gqF8clDOUvaK7mH_BakhQjDWt3KSloea73AxhmEWfGb3WIp_vpb3Gfh5CIp78-M"/>
+</div>
+</div>
+<div class="container mx-auto text-center relative z-10">
+<div class="mb-4">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest block mb-2">INTERNATIONAL SINGER</span>
+<div class="w-12 h-[1px] bg-tertiary mx-auto"></div>
+</div>
+<h1 class="relative">
+<span class="block font-display-lg text-[64px] md:text-[140px] leading-none text-secondary hero-overlap mix-blend-multiply italic">Ribkha</span>
+<span class="block font-display-lg text-[64px] md:text-[140px] leading-[0.8] text-primary -mt-4 md:-mt-8">Marzhanata</span>
+<span class="block font-display-lg text-[64px] md:text-[140px] leading-[0.8] text-secondary text-right pr-4 md:pr-12 italic">Purba</span>
+</h1>
+<div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8">
+<div class="gilded-frame max-w-sm rotate-3 hover:rotate-0 transition-transform duration-500">
+<img class="w-full aspect-[4/5] object-cover" data-alt="A striking portrait of a sophisticated woman with an elegant posture, reminiscent of a classic oil painting. She is wearing a modern yet heritage-inspired burgundy gown. The background is a minimalist cream studio setting with soft, directional lighting that creates a high-end gallery feel. The overall mood is prestigious and intellectual, embodying the persona of a world-class artist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE6lS_AZtCfaIlMVTNHPLUBtyz8Lk9VbhVsDthZcRA9f3aeH8J0Rq1yFa2O8Q_x5a27rJa6Td4gIYCIovwhsXYOt_9daVR9_sfM8UKZFUH2em05XOHqNt2JVmBrmuzXYtIMy5Igmkc3F1Ilr0WcW0TREI54ZrvWdJ6D0ln1GOD_HAWRCqnx2J34uBT-ouTJCXF2T4Ulc-Hdr35hBsG5ArcHCFKCpzKkll4E7mpxpfnR9Qrwg18ECw"/>
+</div>
+<div class="text-left max-w-xs space-y-4">
+<p class="font-body-md text-body-md text-on-surface-variant">The voice that bridges generations, carrying the legacy of classical training into the modern digital era.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary group" href="#portfolio">
+                            VIEW GALLERY 
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 right-10 opacity-20 hidden md:block">
+<p class="font-label-caps text-label-caps vertical-text transform rotate-90 origin-right">SINCE 1997 • HERITAGE IN DIGITAL</p>
+</div>
+</section>
+<!-- Section 2: About -->
+<section class="py-section-gap px-4 md:px-margin-page bg-primary text-on-primary" id="about">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="reveal-on-scroll">
+<h2 class="font-headline-xl text-headline-xl mb-8">A Journey Through Sound &amp; Silence</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-surface-variant/80">
+<p>Ribkha's narrative is one of discipline and melodic exploration. Her foundation was laid in the quiet halls of <span class="text-secondary-fixed italic">SD Joannes Bosco</span>, where her voice first found its resonance.</p>
+<p>This path continued through <span class="text-secondary-fixed italic">SMP Budi Utama</span>, honing the technical precision required for international stages, and ultimately culminating in the artistic maturity found at <span class="text-secondary-fixed italic">SMA Stella Duce 1</span>.</p>
+<p>Today, she stands at the intersection of heritage and innovation—a singer whose reach is global, but whose heart remains rooted in the artisanal roots of her education.</p>
+</div>
+<div class="mt-12 flex gap-12 border-t border-outline/30 pt-8">
+<div>
+<p class="font-display-lg text-display-lg text-secondary-fixed-dim">03</p>
+<p class="font-label-caps text-label-caps uppercase opacity-60">Academic Milestones</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-secondary-fixed-dim">15+</p>
+<p class="font-label-caps text-label-caps uppercase opacity-60">Years of Performance</p>
+</div>
+</div>
+</div>
+<div class="relative reveal-on-scroll">
+<div class="border-[16px] border-surface/5 aspect-square overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of an antique musical score with handwritten notes and coffee stains, resting on a polished mahogany piano. The lighting is warm and candle-lit, creating a sense of history and dedication. The image is framed by a thin gold border, maintaining the editorial minimalism and heritage aesthetic of the portfolio. The palette focuses on deep browns, creams, and subtle gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWBa3IyEcI_NK5AOj-Jy4_Cs3gP1Xxs2EVGGK_SwVTJJ6G6_r-FgKIVNwPfZT77fmgsTjKqQxAj6Ufd3TA7dr9Mf3pr8x4ZWcBbEElGmb1N8JsksIq-JKKiBoAYijx39-A0OcrX7Q-G63hKppVAL5YObtXlHSgU0ZvnKyZsz3SsHq2WrBcY2yY7WIqBCGUUROSYczQLYWHFHUK7OC2W9XlE6dvDLl3yucbcuEJ_g3kA9xF-lcvTY"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-secondary p-8 hidden md:block">
+<span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline-md text-headline-md text-white mt-4 italic">Art is not a destination, but the path we pave.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Singing Portfolio -->
+<section class="py-section-gap px-4 md:px-margin-page bg-surface" id="portfolio">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-on-scroll">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest mb-4 block">EXHIBITIONS</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Singing Portfolio</h2>
+</div>
+<p class="max-w-xs font-body-md text-body-md text-on-surface-variant mt-4 md:mt-0">Curated highlights from international performances and recording sessions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Portfolio Item 1 -->
+<div class="reveal-on-scroll">
+<div class="gilded-frame group cursor-pointer overflow-hidden relative">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A dynamic photograph of a singer performing on a dimly lit stage with blue and gold atmospheric lighting. The artist is captured mid-note, expressing intense emotion. The visual style is high-contrast and dramatic, emphasizing the 'Modern Heritage' theme. The stage is framed by heavy velvet curtains, creating a sense of grandeur and prestige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcvNGKwBIeFc2KWsDjhAK77Wyk4OR36Zbvj6Ks9aC_YVQbmQcjkJEuVcUzJlDLplVfHbNgXgdImO4bfwNuUApvR8E_gcrr2465Q_ia5WVv_2RxdWgmod8SjKhFVmYaQDJqNHvh6-iaZei4BMmJ7AjQNmtl6dXf2zmoOVzet6oHk9lbc8Gja1AKT5bU9IXUG9YRdF-YnpcYb9W3zFZ04sjXjdCVeq74MG_67ZOf5_ktjEj5E_bjAPM"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="mt-6 border-l-2 border-secondary pl-4">
+<h3 class="font-headline-md text-headline-md text-primary">Echoes of the Hall</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Live Recital • 2023</p>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="reveal-on-scroll" style="transition-delay: 150ms;">
+<div class="gilded-frame group cursor-pointer overflow-hidden relative">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist aesthetic shot of a professional studio microphone in a sound-dampened recording booth. The lighting is soft and moody, with a slight warm tint. The composition follows the 'Asymmetry' rule, focusing on the microphone's sleek design against a textured wall. The image conveys a sense of technical precision and artistic focus, fitting for a portfolio of a global artist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa2dlrIT1Ycd5xzaGnILhQ5N_K-07bI0m8ok262IJwUchc5QM31h-Rw-XcQAE0o23qx2Yt02k8d967babtYFLdJtoU1Ex8E7pp0RVukDyvzCOsS94ToTnbBTSUeDNt3-ngV2x_NNlGaiwMazUgKRau_iTp9xPuTXRCUf8rkVjxmujAvSMzDbqM_7lUVCZ_m2f7iSWddQk3fwxuNndiw9ZRpvICrItja_0tVAdEIHUi8HhpmvSz8GI"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">headphones</span>
+</div>
+</div>
+<div class="mt-6 border-l-2 border-secondary pl-4">
+<h3 class="font-headline-md text-headline-md text-primary">Studio Sessions</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Original EP • 2024</p>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="reveal-on-scroll" style="transition-delay: 300ms;">
+<div class="gilded-frame group cursor-pointer overflow-hidden relative">
+<img class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An artistic photograph of a grand auditorium seen from the back, filled with a blurred audience. A single bright spotlight cuts through the darkness toward the stage. The palette is dominated by deep burgundy and golden hues, echoing the 'Heritage' design system. The mood is expectant and prestigious, symbolizing a successful international singing career and the connection between the artist and the public." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF6uF91ojgNCeqBIvBJGHQUVudgHIBKs1HOF2B6zXq6--69EOXR4D9uWlPtGbXGnzIfKAZRakibPCmlf22TnL5wVRl2hqDoh5PizuI5iXKQQ9Mozbq71aBHlcfo9Wqvr8h9H2McEZra-AKpiyIwVCtcsdLKmL31Zi49ZDZCW5AnbftQ3b_2ju19xOtEur-a0JPMQ2ML05cKTHB9o1JwyamPoVJdKOa6GTcb5o43-jVtnN_v579qiA"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+</div>
+<div class="mt-6 border-l-2 border-secondary pl-4">
+<h3 class="font-headline-md text-headline-md text-primary">Vocal Masterclass</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Global Tour • 2022</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Coding Journey -->
+<section class="py-section-gap px-4 md:px-margin-page bg-surface-container overflow-hidden" id="coding">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-12 mb-16 reveal-on-scroll">
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest block mb-4">LOGIC MEETS LYRICISM</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">My Coding Diary</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors" id="prevBtn">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors" id="nextBtn">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 transition-transform duration-500 ease-out" id="carousel">
+<!-- Exercise 1 -->
+<div class="min-w-full md:min-w-[45%] bg-surface border border-outline-variant p-8 reveal-on-scroll">
+<div class="mb-8 border-b border-outline-variant pb-8">
+<span class="font-label-caps text-label-caps text-tertiary">MODULE 01</span>
+<h3 class="font-headline-xl text-headline-xl text-primary mt-2">Exercise 1: Profile Card</h3>
+</div>
+<div class="bg-surface-container-high aspect-video mb-8 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist UI design mockup of a digital profile card. It features a sophisticated layout with a serif font, high-contrast burgundy and cream colors, and a circular image placeholder. The design is structured with precise spacing and subtle hard shadows, demonstrating the 'Editorial Minimalism' style of the design system. The background is a crisp white, emphasizing the card's premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGRrkldvuDo92swdie5zAkndkzzwL3ITH-srG2CIXQRgyxuQFTLqycySqjAyxsvtvDsjS85SlkqbaPrFU4vp9M0S6NDht5BxkwKtzY1EeOJdBAdnQsqXUZC0s1egL4gsp0MmbSN2zE8btkizNRv614lcOXI1CPwIw5W4WfLmzBhrL0dSWSjXMh9tskE6xhIAQ81RSHyRAOsnqWRbeOcTKf6pM09SDLFGLiGu5jhbIMdCFHD6MuxQw"/>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-4">Lessons Learned</h4>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Mastering the delicate balance of padding and typography hierarchy. I learned how visual weight can guide a user's attention just as a melody guides an audience."</p>
+</div>
+</div>
+<!-- Exercise 2 -->
+<div class="min-w-full md:min-w-[45%] bg-surface border border-outline-variant p-8 reveal-on-scroll">
+<div class="mb-8 border-b border-outline-variant pb-8">
+<span class="font-label-caps text-label-caps text-tertiary">MODULE 02</span>
+<h3 class="font-headline-xl text-headline-xl text-primary mt-2">Exercise 2: Navigation Bar</h3>
+</div>
+<div class="bg-surface-container-high aspect-video mb-8 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sleek digital interface showing a modern navigation bar design. The layout is 'airy' and widely spaced, using the label-caps typography for links. It features a thin gold divider line and a sophisticated '+' icon as a focal point. The color palette is restricted to cream, burgundy, and gold, reflecting the 'Heritage' design identity. The overall composition is clean and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK6ManqUorfwUeIs6XttIEU7YPuKKqFpMbHc8lROSo60iQ13jZEhlhB8pkfBwYA1H4rPCmGqK1hGU_FztfvY7Fb0tM3N-46nKcWDenobWvAeJKQsW0CQ7HQl5G3TGFRIn24Qfz3ftHhtjYPIjLRx4L7FgvAuyy3MkxbF8Ogrz_RlJlHvgWaPSZc7v1DYFYF8k-vKtApurDNj0l4ouvALP9Uc6_1c8bZgOIlTY3tiphxwGXy1mD4kw"/>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-4">Lessons Learned</h4>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Understanding the architecture of web navigation. It's about creating a seamless path through information, ensuring the 'gallery' of content is easy to traverse."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Contact -->
+<section class="py-section-gap px-4 md:px-margin-page bg-surface-container-lowest" id="contact">
+<div class="max-w-4xl mx-auto border-2 border-primary p-8 md:p-16 relative reveal-on-scroll">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest px-6">
+<span class="material-symbols-outlined text-4xl text-secondary">mail</span>
+</div>
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Get in Touch</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Let's orchestrate something extraordinary together.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary absolute -top-3 left-0">NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-primary pt-4 pb-2 px-0 focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md" placeholder="Your Full Name" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary absolute -top-3 left-0">EMAIL</label>
+<input class="w-full bg-transparent border-0 border-b border-primary pt-4 pb-2 px-0 focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary absolute -top-3 left-0">MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-primary pt-4 pb-2 px-0 focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md resize-none" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<div class="text-center">
+<button class="px-12 py-4 bg-secondary text-white font-label-caps text-label-caps tracking-widest hover:bg-primary transition-all duration-300" type="submit">SEND MESSAGE</button>
+</div>
+</form>
+<div class="mt-16 flex flex-col md:flex-row justify-center items-center gap-12 border-t border-outline-variant pt-12">
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
+<span class="font-label-caps text-label-caps">INSTAGRAM</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
+<span class="font-label-caps text-label-caps">YOUTUBE</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
+<span class="font-label-caps text-label-caps">LINKEDIN</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-4 md:px-margin-page py-block-padding mt-section-gap bg-primary dark:bg-primary-container text-on-primary border-t border-outline-variant">
+<div class="mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-on-primary">R. Purba</span>
+<p class="font-body-md text-body-md mt-2 opacity-80">Heritage in Digital.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-surface-variant opacity-80 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-surface-variant opacity-80 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-surface-variant opacity-80 hover:opacity-100 transition-opacity" href="#">Email</a>
+</div>
+<p class="font-body-md text-body-md opacity-60 text-center md:text-right">© 2024 Ribkha Marzhanata Purba.</p>
+</div>
+</footer>
+<script>
+        // Reveal on Scroll Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+
+        // Carousel Logic
+        const carousel = document.getElementById('carousel');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        let currentPos = 0;
+
+        nextBtn.addEventListener('click', () => {
+            currentPos = Math.min(currentPos + 50, 50);
+            carousel.style.transform = `translateX(-${currentPos}%)`;
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentPos = Math.max(currentPos - 50, 0);
+            carousel.style.transform = `translateX(-${currentPos}%)`;
+        });
+
+        // Smooth nav highlight
+        window.addEventListener('scroll', () => {
+            const sections = ['about', 'portfolio', 'coding', 'contact'];
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element && window.pageYOffset >= element.offsetTop - 100) {
+                    current = section;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                if (link.getAttribute('href').includes(current) && current !== '') {
+                    link.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>
